@@ -66,7 +66,8 @@ io.on('connection', function(client){
 
 });
 
-function sendTelegramMessage(chatId, text, parseMode) {
+function sendTelegramMessage( text, parseMode) {
+    var chatId='@2020';
     request
         .post('https://api.telegram.org/bot' + process.env.TELEGRAM_TOKEN + '/sendMessage')
         .form({
